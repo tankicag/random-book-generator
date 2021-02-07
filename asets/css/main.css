@@ -65,7 +65,14 @@ body {
   align-items: center;
 }
 
-button {
+.book-title {
+  color: white;
+  font-family: Sriracha;
+  font-style: normal;
+  margin: 15px;
+}
+
+.button {
   background: #d45efb;
   outline: none;
   box-shadow: 1px 4px 4px rgba(197, 193, 193, 0.25);
