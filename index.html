@@ -12,6 +12,10 @@
       crossorigin="anonymous"
     />
     <link href="asets/css/main.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="node_modules/jquery.rateit/scripts/rateit.css"
+    />
     <title>Random Book Generator</title>
   </head>
   <body>
@@ -34,18 +38,59 @@
           </p>
         </div>
         <div class="content-section">
-          <img src="/asets/images/book.png" alt="" />
-          <h2 class="book-title"></h2>
+          <div class="component">
+            <ul class="align">
+              <li>
+                <figure class="book">
+                  <!-- Front -->
+
+                  <ul class="hardcover_front">
+                    <li>
+                      <div class="coverDesign bookcover">
+                        <h3 class="book-title"></h3>
+                        <p class="authorDisplay"></p>
+                      </div>
+                    </li>
+                    <li></li>
+                  </ul>
+
+                  <!-- Pages -->
+
+                  <ul class="page">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                  <!-- Back -->
+
+                  <ul class="hardcover_back">
+                    <li></li>
+                    <li></li>
+                  </ul>
+                  <ul class="book_spine">
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </figure>
+              </li>
+            </ul>
+          </div>
+          <p class="discriptionDisplay"></p>
+          <div id="rating"></div>
           <button class="button">Click for random book</button>
         </div>
       </div>
       <div class="navigation">
-        <i class="far fa-image"></i>
-        <i class="far fa-user"></i>
-        <i class="far fa-star"></i>
-        <i class="far fa-credit-card"></i>
+        <button class="authorButton"><i class="far fa-user"></i></button>
+        <button class="descriptionButton">
+          <i class="far fa-comment-dots"></i>
+        </button>
+        <button class="starsButton"><i class="far fa-star"></i></button>
+        <button class="buyButton"><i class="far fa-credit-card"></i></button>
       </div>
     </div>
   </body>
   <script src="/asets/js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="/node_modules/jquery.rateit/scripts/jquery.rateit.min.js"></script>
 </html>
