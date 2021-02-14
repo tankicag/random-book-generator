@@ -780,11 +780,18 @@ figcaption p {
   margin: 15px;
 }
 
-.discriptionDisplay {
+#rating,
+.discriptionDisplay,
+.websiteDisplay {
   color: white;
   font-family: Sriracha;
   font-style: normal;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+.websiteDisplay > a {
+  font-style: italic;
+  color: white;
 }
 
 .descriptionButton,

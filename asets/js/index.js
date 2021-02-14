@@ -9,13 +9,16 @@ const authorButton = document.querySelector(".authorButton");
 const bookcoverColor = document.querySelector(".bookcover");
 const ratingDisplay = document.querySelector("#rating");
 const starsButton = document.querySelector(".starsButton");
+const websiteDisplay = document.querySelector(".websiteDisplay");
+const buyButton = document.querySelector(".buyButton");
 
 function getBook() {
   fetch("https://my-first-books-api.herokuapp.com/books/")
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-
+      const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      bookcoverColor.style.backgroundColor = "#" + randomColor;
       const randomNumber = Math.random() * data.length;
       const randomInteger = Math.floor(randomNumber);
 
@@ -39,15 +42,32 @@ function getBook() {
       authorButton.addEventListener("click", getAuthor);
 
       function getRating() {
-        const rating = data[randomInteger].details[0].reviews;
+        let rating = data[randomInteger].details[0].reviews;
         console.log(rating);
-        ratingDisplay.className = "rateit";
+        $("#rating").append(
+          `<div class="rateit" data-rateit-value="${rating}" data-rateit-ispreset="true" data-rateit-readonly="true"></div>`
+        );
+        $(".rateit").rateit();
+        $(".rateit").hover(
+          function () {
+            $(this).append($(`<sup> ${rating}</sup>`));
+          },
+          function () {
+            $(this).find("sup").last().remove();
+          }
+        );
       }
-      return starsButton.addEventListener("click", getRating);
-    });
+      starsButton.addEventListener("click", getRating);
 
-  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-  bookcoverColor.style.backgroundColor = "#" + randomColor;
+      function getWebsite() {
+        const website = data[randomInteger].web;
+        console.log(website);
+
+        websiteDisplay.innerHTML =
+          "Where to buy: " + `<a href=${website}>${website}</a>`;
+      }
+      return buyButton.addEventListener("click", getWebsite);
+    });
 }
 
 button.addEventListener("click", getBook);
