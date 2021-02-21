@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/tankicag/Random-Book/issues"
   },
-  "homepage": "https://github.com/tankicag/Random-Book#readme",
+  "homepage": ".",
   "dependencies": {
     "jquery.rateit": "^1.1.3"
   }
