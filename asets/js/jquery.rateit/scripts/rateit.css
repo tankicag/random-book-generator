@@ -65,8 +65,8 @@
             }
 
             .rateit .rateit-preset {
-                background: url(star.gif) left -48px;
-                color: rgb(239, 107, 34);
+                background: url(star.gif) left -32px;
+                color: rgb(255, 252, 58);
             }
 
             .rateit .rateit-preset-rtl {
