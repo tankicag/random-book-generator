@@ -109,28 +109,6 @@ ul {
   align-items: center;
 }
 
-/* ///////////////////////////////////////////////////
-
-HARDCOVER
-Table of Contents
-
-1. container
-2. background & color
-3. opening cover, back cover and pages
-4. position, transform y transition
-5. events
-6. Bonus
-	- Cover design
-	- Ribbon
-	- Figcaption
-7. mini-reset
-
-/////////////////////////////////////////////////////*/
-
-/*
-	1. container
-*/
-
 .book {
   position: relative;
   width: 160px;
@@ -803,6 +781,8 @@ figcaption p {
   box-shadow: 1px 2px rgb(118, 118, 118);
   padding: 10px 10px;
   border: 2px solid #111111;
+  border: 2px solid #111111;
+  margin: 5px;
 }
 .button {
   background: #d45efb;
@@ -819,13 +799,13 @@ figcaption p {
 }
 .navigation {
   width: 5%;
-  height: 40%;
   background: #222222;
   border-radius: 107px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  padding: 10px 0;
 }
 
 .navigation i {
@@ -836,4 +816,76 @@ figcaption p {
 
 .navigation i:hover {
   color: #d45efb;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 800px) {
+  html,
+  body {
+    height: unset;
+  }
+  .main-div {
+    flex-direction: column;
+  }
+
+  .first-div {
+    width: 90%;
+    height: 125vh;
+    background: #222222;
+    border-radius: 107px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 10%;
+  }
+
+  .logo-section {
+    padding: 10%;
+    width: 80%;
+    background: rgba(58, 58, 58, 0.22);
+    border-radius: 107px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    width: 70%;
+    height: auto;
+  }
+
+  .content-section {
+    width: unset;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .book {
+    bottom: 70px;
+    position: absolute;
+  }
+
+  .navigation {
+    width: 12%;
+  }
+
+  .align > li {
+    min-height: 0;
+  }
+  .navigation {
+    flex-direction: row;
+    background: none;
+  }
+
+  .button {
+    position: absolute;
+    padding: 10px;
+    bottom: -195px;
+  }
+  #rating, .discriptionDisplay, .websiteDisplay {
+   font-size: 14px;
+   text-align: center;
+   margin-bottom: 0;
+}
 }
