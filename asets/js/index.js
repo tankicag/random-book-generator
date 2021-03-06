@@ -12,6 +12,8 @@ const starsButton = document.querySelector(".starsButton");
 const websiteDisplay = document.querySelector(".websiteDisplay");
 const buyButton = document.querySelector(".buyButton");
 
+
+
 function getBook() {
   fetch("https://my-first-books-api.herokuapp.com/books/")
     .then((response) => response.json())

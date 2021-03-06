@@ -98,7 +98,7 @@ ul {
 
 .align > li {
   width: 500px;
-  min-height: 300px;
+  height: 10em;
   display: inline-block;
   margin: 30px 20px 0px 30px;
   padding: 0 0 0 60px;
@@ -110,7 +110,6 @@ ul {
 }
 
 .book {
-  position: relative;
   width: 160px;
   height: 220px;
   -webkit-perspective: 1000px;
@@ -119,6 +118,8 @@ ul {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  top: 4em;
+  position: absolute;
 }
 
 /*
@@ -739,6 +740,7 @@ figcaption p {
 
   .book {
     margin: 0 auto;
+    
   }
 
   figcaption {
@@ -785,6 +787,8 @@ figcaption p {
   margin: 5px;
 }
 .button {
+  position: absolute;
+  bottom: 4em;
   background: #d45efb;
   outline: none;
   box-shadow: 1px 4px 4px rgba(197, 193, 193, 0.25);
@@ -831,13 +835,13 @@ figcaption p {
 
   .first-div {
     width: 90%;
-    height: 125vh;
+    height: 70em;
     background: #222222;
     border-radius: 107px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin-top: 10%;
+    margin-top: 5%;
   }
 
   .logo-section {
@@ -862,7 +866,7 @@ figcaption p {
   }
 
   .book {
-    bottom: 70px;
+    top: 37em;
     position: absolute;
   }
 
@@ -881,11 +885,77 @@ figcaption p {
   .button {
     position: absolute;
     padding: 10px;
-    bottom: -195px;
+    bottom: -27em;
+
   }
   #rating, .discriptionDisplay, .websiteDisplay {
    font-size: 14px;
    text-align: center;
    margin-bottom: 0;
 }
+}
+
+@media screen and (max-width: 600px) {
+  .first-div {
+    width: 90%;
+    height: 70em;
+    background: #222222;
+    border-radius: 107px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 5%;
+  }
+
+  
+  .button {
+    position: absolute;
+    padding: 10px;
+    bottom: -21em;
+
+  }
+}
+
+@media screen and (max-width: 540px) {
+ 
+  .book {
+    top: 40em;
+  }
+
+  .button {
+    position: absolute;
+    padding: 10px;
+    bottom: -28em;
+
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+ 
+  .book {
+    top: 35em;
+  }
+
+  .button {
+    position: absolute;
+    padding: 10px;
+    bottom: -22em;
+
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+ 
+  .book {
+    top: 35em;
+  }
+
+  .button {
+    position: absolute;
+    padding: 10px;
+    bottom: -31em;
+
+  }
 }
